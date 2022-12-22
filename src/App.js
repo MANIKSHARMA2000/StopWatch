@@ -23,6 +23,8 @@ export default function Stopwatch() {
       Id = setInterval(run, 10);
       setrunning(true);
     }
+  }
+  function handleStop() {
     if (running) {
       clearInterval(Id);
       setrunning(false);
@@ -44,7 +46,7 @@ export default function Stopwatch() {
         </p>
         <p>
           <button onClick={handleStart}>Start</button>
-          <button onClick={handleStart}>Stop</button>
+          <button onClick={handleStop}>Stop</button>
         </p>
         <button onClick={handleReset}>Reset</button>
       </div>
